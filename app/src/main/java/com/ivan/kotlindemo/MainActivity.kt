@@ -3,15 +3,17 @@ package com.ivan.kotlindemo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView = find<TextView>(R.id.text)
+        //val textView = find<TextView>(R.id.text)
+
         R.id.text.onClick(this) {
-            textView.text = "Kotlin Extension"
+            text.text = "Kotlin Extension"
         }
     }
 }
